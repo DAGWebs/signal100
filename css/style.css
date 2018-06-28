@@ -1,0 +1,265 @@
+body {
+	font-family: 'Crimson Text', serif;
+	background-color: #060707;
+}
+footer {
+	text-align: center;
+	color: white;
+	font-size: 35px;
+	padding-bottom: 40px;
+}
+
+#logo {
+	font-family: 'Bungee Shade', cursive;
+	font-size: 25px;
+}
+#navbarNavAltMarkup a {
+	font-family: 'Black Ops One', cursive;
+	font-size: 20px;
+}
+#navbarNavAltMarkup button {
+	font-family: 'Black Ops One', cursive;
+	font-size: 20px;
+	color: darkgray;
+}
+#navbarNavAltMarkup button:hover {
+	font-family: 'Black Ops One', cursive;
+	font-size: 20px;
+	color: lightgray;
+}
+#main-img-div {
+	height: 100vh;
+	background-image: url("../img/main.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-top: 60px;
+	background-position: center;
+}
+.form-title{
+	text-align: center;
+	font-family: 'Black Ops One', cursive;
+}
+.loginForm input[type="text"] {
+	width: 100%;
+	margin-bottom: 10px;
+	height: 50px;
+	font-size: 25px;
+	text-align: center;
+	color: darkgray;
+}
+.loginForm input[type="password"] {
+	width: 100%;
+	margin-bottom: 4px;
+	height: 50px;
+	font-size: 25px;
+	text-align: center;
+	color: darkgray;
+}
+.loginForm input[type="checkbox"] {
+	font-size: 14px;
+	margin-top: -4px;
+}
+.loginForm input[type="text"]:hover {
+	border: solid black 1px;
+}
+.loginForm input[type="password"]hover {
+	border: solid black 1px;
+}
+
+.modal-footer p {
+	padding-right: 70px;
+	padding-top: 15px;
+}
+
+.modal-footer input {
+	width: 150px;
+	height: 40px;
+	font-size: 20px;
+	background-color: darkgray;
+	color: white;
+	border: none;
+	border-radius: 25px;
+	font-family: 'Black Ops One', cursive;
+}
+
+.modal-footer input:hover {
+	background: #212323;
+}
+
+.about {
+	padding: 40px;
+}
+
+.about h1 {
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Black Ops One', cursive;
+	font-size: 45px;
+	padding: 20px;
+}
+.applications-dash h1 {
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Black Ops One', cursive;
+	font-size: 45px;
+	padding: 20px;
+}
+.applications-dash {
+	background-image: url("../img/applicationbg.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding-bottom: 20px;
+}
+
+.application-header {
+	border-bottom: 4px solid black;
+	padding: 10px;
+}
+
+.server-application {
+	background-color: rgba(255, 255, 255, .3);
+}
+.staff-application {
+	background-color: rgba(255, 255, 255, .3);
+}
+.server-application:hover {
+	animation: applications 5s;
+	background-color: rgba(255,255,255, .8);
+}
+.staff-application:hover {
+	animation: applications 5s;
+	background-color: rgba(255,255,255, .8);
+}
+.application-body {
+	font-size: 18px;
+	padding: 10px;
+}
+.application-body h3 {
+	text-transform: uppercase;
+	font-size: 30px;
+	padding: 20px;
+}
+.application-body input {
+	width: 250px;
+	height: 50px;
+	border: none;
+	animation: none;
+	color: white;
+	background: #414449;
+
+}
+.application-body input:hover {
+	background: #212323;
+}
+
+.contact-form {
+	background-image: url(../img/phone.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover; 
+	margin-top: 100px;
+	margin-bottom: 50px;
+}
+
+.contact-form {
+	height: 70vh;
+	margin-top: 10px;
+	margin-bottom: 50px;
+}
+.contact-form form {
+	width: 25%;
+	margin: auto auto;
+	margin-top: 100px;
+}
+.contact-form input {
+	width: 100%;
+	margin-bottom: 20px;
+	margin-left: 30px;
+}
+.name input {
+	width: 100%;
+}
+
+.contact-form textarea {
+	width: 100%;
+	margin-left: 30px;
+	margin-bottom: 10px;
+}
+
+.contact-form input {
+	height: 60px;
+	font-size: 25px;
+}
+.contactusform {
+	padding-top: 50px;
+}
+.contactus {
+	text-align: center;
+}
+.contactus input[type="submit"] {
+	background: #414449;
+	color: white;
+	font-size: 35px;
+	border: none;
+}
+.contactus input[type="submit"]:hover {
+	background: #212323;
+}
+.contactus h1 {
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Black Ops One', cursive;
+	font-size: 45px;
+	padding: 20px;
+}
+/*.card {
+	max-height: 550px;
+	min-height: 550px;
+}*/
+
+@media (max-width: 1000px) {
+	.about {
+		padding: 0;
+		text-align: center;
+	}
+	.card {
+		width: 90vw;
+		height: 100%;
+		margin: 0 auto;
+		margin-bottom: 19px;
+		margin-left: 25px;
+	}
+	.row {
+		display: block;;
+	}
+	.col-3 {
+		display: block;
+		
+	}
+	.staff-application {
+		width: 100vw;
+		margin-bottom: 20px;
+	}
+	.server-application {
+		width: 100vw;
+	}
+	.contact-form form {
+		width: 50%;
+	}
+	.register-form form {
+		width: 60%;
+	}
+	footer {
+		font-size: 20px;
+	}
+}
+
+@keyframes applications {
+	from {
+		background-color: rgba(255, 255, 255, .3);
+	}
+	to {
+		background-color: rgba(255, 255, 255, .8);
+	}
+}

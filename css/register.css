@@ -1,0 +1,43 @@
+.register-form {
+  text-align: center;
+  width: 35%;
+  margin: 0 auto;
+}
+.register-form h1{
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Black Ops One', cursive;
+  font-size: 45px;
+  padding-top: 150px;
+}
+.register-form form {
+  margin: 0 auto;
+}
+.register-form form input {
+  width: 100%;
+  height: 60px;
+  font-size: 24px;
+  margin-bottom: 14px;
+  font-weight: bold;
+
+}
+.register-form form input[type="submit"] {
+  width: 100%;
+  height: 60px;
+  font-size: 24px;
+  padding: 0;
+  background: #414449;
+  color: white;
+  border: none;
+}
+.register-form form input[type="submit"]:hover {
+  background: #212323;
+}
+
+.error {
+  border-radius: 25px;
+  margin-bottom: 5px;
+  padding: 10px;
+  color: darkred;
+  font-size: 20px;
+}
