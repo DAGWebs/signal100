@@ -34,31 +34,35 @@ You can use any one of the programs listed above. I personaly perfer XAMPP
 	<li>Locate the includes folder and find db.php</li>
 		
 				`
-					<?php
-						/////////////////////////////////////////////////////////////////////////////
-						////					PHP DATABASE CONFIGURATIONAS					////
-						////				USE THIS TO PUT YOU DATA BASE DETAILS 				////
-						////				  THIS USES THE MYSQLI CONFIGUATIONS 				////
-						////////////////////////////////////////////////////////////////////////////
+<?php
+
+	/////////////////////////////////////////////////////////////////////////////
+	////					PHP DATABASE CONFIGURATIONAS					////
+	////				USE THIS TO PUT YOU DATA BASE DETAILS 				////
+	////				  THIS USES THE MYSQLI CONFIGUATIONS 				////
+	////////////////////////////////////////////////////////////////////////////
 							
-							$host		= "127.0.0.1";
-							$username	= "root";
-							$password	= "";
-							$database   = "s100"; 	
-						/////////////////////////////////////////////////////////////////////////////
-						////					PHP DATABASE CONFIGURATIONAS					////
-						////				USE THIS TO PUT YOU DATA BASE DETAILS 				////
-						////				  THIS USES THE MYSQLI CONFIGUATIONS 				////
-						////////////////////////////////////////////////////////////////////////////
-							$connection = mysqli_connect($host, $username, $password, $database);
-							if(!$connection) {
-							  die("Connection Failed: " . mysqli_connect_error());
-							} 
-					?>
+		$host		= "127.0.0.1";
+		$username	= "root";
+		$password	= "";
+		$database   = "s100"; 	
+
+	/////////////////////////////////////////////////////////////////////////////
+	////					PHP DATABASE CONFIGURATIONAS					////
+	////				USE THIS TO PUT YOU DATA BASE DETAILS 				////
+	////				  THIS USES THE MYSQLI CONFIGUATIONS 				////
+	////////////////////////////////////////////////////////////////////////////
+
+	$connection = mysqli_connect($host, $username, $password, $database);
+	if(!$connection) {
+		 die("Connection Failed: " . mysqli_connect_error());
+	} 
+
+?>
 				`
 <li>You will only need to worry about step 3 if you do not have the .sql file</li>
-<li><a href="localhost/phpmyadmin">Go Here</a> Click import and import the .sql file</li>
-<li><a href="localhost/signal00">Go Here</a></li>
+<li><a href="http://localhost/phpmyadmin">Go Here</a> Click import and import the .sql file</li>
+<li><a href="http://localhost/signal00">Go Here</a></li>
 </ol>
 
 Additional note.... If you get Site cant be reached and your software is not running then you must turn on the sofware that you downloaded 
