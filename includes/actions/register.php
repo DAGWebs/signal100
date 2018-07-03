@@ -106,16 +106,19 @@
 			}
 		}
 			$password = password_hash($password, PASSWORD_BCRYPT);
-			$verification = "S100 - " . rand(100000, 999999);
+			$verification = "S100 - ";
+			$code = rand(100000, 999999);
+			$varCode = $verification . $code;
 			$rank = "member";
 			$verified = "false";
 			$joined = date('d-m-Y');
 
-			$sql = "INSERT INTO users (user_username, user_email, user_password, user_verification, user_rank, user_varified, user_joined) VALUES ('$username', '$email', '$password', '$verification', '$rank', '$verified', '$joined');";
+			$sql = "INSERT INTO users (user_username, user_email, user_password, user_verification, user_rank, user_varified, user_joined) VALUES ('$username', '$email', '$password', '$varCode', '$rank', '$verified', '$joined');";
 			mysqli_query($connection, $sql);
 
 			$_SESSION['registered'] = "Registered";
-			url("../../login.php");
+			$_SESSION['code'] = $code;
+			url("../../thankyou.php");
 
 	} else {
 		$_SESSION["Nosubmit"] = "Submit";
