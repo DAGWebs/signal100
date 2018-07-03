@@ -36,20 +36,22 @@ You can use any one of the programs listed above. I personaly perfer XAMPP
 
 `<?php`
 
-	/////////////////////////////////////////////////////////////////////////////
-	////					PHP DATABASE CONFIGURATIONAS					////
-	////				USE THIS TO PUT YOU DATA BASE DETAILS 				////
-	////				  THIS USES THE MYSQLI CONFIGUATIONS 				////
-	////////////////////////////////////////////////////////////////////////////						
+	
+						PHP DATABASE CONFIGURATIONAS					
+					USE THIS TO PUT YOU DATA BASE DETAILS 				
+				      THIS USES THE MYSQLI CONFIGUATIONS 				
+	
+
 		$host		= "127.0.0.1";
 		$username	= "root";
 		$password	= "";
-		$database   = "s100"; 	
-	/////////////////////////////////////////////////////////////////////////////
-	////					PHP DATABASE CONFIGURATIONAS					////
-	////				USE THIS TO PUT YOU DATA BASE DETAILS 				////
-	////				  THIS USES THE MYSQLI CONFIGUATIONS 				////
-	////////////////////////////////////////////////////////////////////////////
+		$database   = "s100"; 
+
+	
+						PHP DATABASE CONFIGURATIONAS					
+					USE THIS TO PUT YOU DATA BASE DETAILS 				
+					  THIS USES THE MYSQLI CONFIGUATIONS 				
+	
 	$connection = mysqli_connect($host, $username, $password, $database);
 	if(!$connection) {
 		 die("Connection Failed: " . mysqli_connect_error());
