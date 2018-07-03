@@ -69,3 +69,5 @@ Additional note.... If you get Site cant be reached and your software is not run
 IE. windows key XAMPP Control Panal and run it
 
 Note on testing registration. Email does not send yet as of update 1.1vB to get you verifiecation code go into the database and copy the user_verification code.
+
+If Links dont work you have to figure out what your localhost is and if there is a port. it will look like this localhost/portHere
