@@ -8,7 +8,7 @@
 	$host		= "127.0.0.1";
 	$username	= "root";
 	$password	= "";
-	$database   = "shearboard"; 	
+	$database   = "s100"; 	
 
 /////////////////////////////////////////////////////////////////////////////
 ////					PHP DATABASE CONFIGURATIONAS					////
@@ -19,5 +19,5 @@
 
 	if(!$connection) {
 	  die("Connection Failed: " . mysqli_connect_error());
-	}
+	} 
 ?>

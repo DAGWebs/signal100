@@ -1,6 +1,7 @@
 <?php 
 	session_start();
 	require_once '../functions.php';
+	require_once '../db.php';
 	if(isset($_POST['submit'])) {
 		$username = escape($_POST['username']);
 		$email = escape($_POST['email']);
@@ -42,7 +43,7 @@
 			$_SESSION['usernameShort'] = $username;
 			$_SESSION['email'] = $email;
 			url("../../register.php?username=toShort");
-		} else if(strlen($username) >= 11) {
+		} else if(strlen($username) >= 21) {
 			$_SESSION['usernameLong'] = $username;
 			$_SESSION['email'] = $email;
 			url("../../register.php?username=toLong");
@@ -51,7 +52,7 @@
 			$_SESSION['username'] = $username;
 			$_SESSION['email'] = $email;
 			url("../../register.php?password=toShort");
-		} else if(strlen($password) >= 20) {
+		} else if(strlen($password) >= 21) {
 			$_SESSION['passwordLong'] = $password;
 			$_SESSION['username'] = $username;
 			$_SESSION['email'] = $email;
@@ -74,6 +75,48 @@
 		//			   	  Check for email values		   		  //
 		//														  //
 		////////////////////////////////////////////////////////////
+
+		////////////////////////////////////////////////////////////
+		//														  //
+		//			   	  Starting querries for db		   		  //
+		//														  //
+		////////////////////////////////////////////////////////////
+
+		$sql = "SELECT * FROM users WHERE user_username = '$username'";
+		$result = mysqli_query($connection, $sql);
+		$resultCheck = mysqli_num_rows($result);
+
+		if($resultCheck) {
+			$_SESSION['usernameTaken'] = $username;
+			$_SESSION['email'] = $email;
+
+			url("../../register.php?username=taken");
+			
+		} else {
+			$sql = "SELECT * FROM users WHERE user_email = '$email'";
+			$result = mysqli_query($connection, $sql);
+			$resultCheck = mysqli_num_rows($result);
+
+			if($resultCheck) {
+				$_SESSION['emailTaken'] = $username;
+				$_SESSION['email'] = $email;
+
+				url("../../register.php?email=taken");
+				
+			}
+		}
+			$password = password_hash($password, PASSWORD_BCRYPT);
+			$verification = "S100 - " . rand(100000, 999999);
+			$rank = "member";
+			$verified = "false";
+			$joined = date('d-m-Y');
+
+			$sql = "INSERT INTO users (user_username, user_email, user_password, user_verification, user_rank, user_varified, user_joined) VALUES ('$username', '$email', '$password', '$verification', '$rank', '$verified', '$joined');";
+			mysqli_query($connection, $sql);
+
+			$_SESSION['registered'] = "Registered";
+			url("../../login.php");
+
 	} else {
 		$_SESSION["Nosubmit"] = "Submit";
 		url("../../register.php?Submit_Button=FALSE");
