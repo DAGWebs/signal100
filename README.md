@@ -1,11 +1,19 @@
 ---
+<<<<<<< HEAD
 <h1>Signal 100 Roleplay Read ME</h1>
+=======
+#Signal 100 Roleplay Read ME
+>>>>>>> f2c0f1e906b0ec13395d402274ead9db08c4e38f
 ---
 This website has been created by DAG. If you have any questions comments or concerns in regards to the site PM him via GitHub (Unless Directed Otherwise). Use of this website is under the <a hreff="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL</a>. All credit must go to all contributors which will be included within the credit location (TBA Later). This website is the intellectual property (IP) of the Owner/developer of the code used within the application. This site has been created for Signal 100 Roleplay and will remain theirs. 
 
 ---
+<<<<<<< HEAD
 <h2> Setting Up the space</h2>
 
+=======
+##Setting Up the space
+>>>>>>> f2c0f1e906b0ec13395d402274ead9db08c4e38f
 ---
 <ul>
 	**One of these software is Required**
@@ -20,8 +28,12 @@ This website has been created by DAG. If you have any questions comments or conc
 You can use any one of the programs listed above. I personaly perfer XAMPP
 
 ---
+<<<<<<< HEAD
 <h2> Setting up the application</h2>
 
+=======
+##Setting up the application
+>>>>>>> f2c0f1e906b0ec13395d402274ead9db08c4e38f
 ---
 <ol>
 	<li>First Download the Files of the Application</li>
@@ -30,6 +42,7 @@ You can use any one of the programs listed above. I personaly perfer XAMPP
 			<li>Your folder path should look like this now:  XAMPP --> htdocs --> Signal100</li>
 		</ul>
 	<li>Locate the includes folder and find db.php</li>
+<<<<<<< HEAD
 		
 				`
 					<?php
@@ -64,3 +77,36 @@ Additional note.... If you get Site cant be reached and your software is not run
 IE. windows key XAMPP Control Panal and run it
 
 Note on testing registration. Email does not send yet as of update 1.1vB to get you verifiecation code go into the database and copy the user_verification code.
+=======
+		<ul>
+			<li>
+				`
+					<?php  
+					/////////////////////////////////////////////////////////////////////////////
+					////					PHP DATABASE CONFIGURATIONAS					////
+					////				USE THIS TO PUT YOU DATA BASE DETAILS 				////
+					////				  THIS USES THE MYSQLI CONFIGUATIONS 				////
+					////////////////////////////////////////////////////////////////////////////
+						
+						$host		= "127.0.0.1";
+						$username	= "root";
+						$password	= "";
+						$database   = "s100"; 	
+
+					/////////////////////////////////////////////////////////////////////////////
+					////					PHP DATABASE CONFIGURATIONAS					////
+					////				USE THIS TO PUT YOU DATA BASE DETAILS 				////
+					////				  THIS USES THE MYSQLI CONFIGUATIONS 				////
+					////////////////////////////////////////////////////////////////////////////
+						$connection = mysqli_connect($host, $username, $password, $database);
+
+						if(!$connection) {
+						  die("Connection Failed: " . mysqli_connect_error());
+						} 
+					?>
+				`
+			</li>
+		</ul>
+	<li></li>
+</ol>
+>>>>>>> f2c0f1e906b0ec13395d402274ead9db08c4e38f
