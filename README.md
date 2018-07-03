@@ -34,7 +34,8 @@ You can use any one of the programs listed above. I personaly perfer XAMPP
 	<li>Locate the includes folder and find db.php</li>
 		
 
-`<?php
+`<?php`
+
 	/////////////////////////////////////////////////////////////////////////////
 	////					PHP DATABASE CONFIGURATIONAS					////
 	////				USE THIS TO PUT YOU DATA BASE DETAILS 				////
@@ -53,7 +54,8 @@ You can use any one of the programs listed above. I personaly perfer XAMPP
 	if(!$connection) {
 		 die("Connection Failed: " . mysqli_connect_error());
 	} 
-?>`
+
+`?>`
 
 <li>You will only need to worry about step 3 if you do not have the .sql file</li>
 <li><a href="http://localhost/phpmyadmin">Go Here</a> Click import and import the .sql file</li>
