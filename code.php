@@ -29,7 +29,7 @@
 			<div class="error"><?php echo $error; ?></div>
 			<form action="includes/actions/code.php" method="post">
 				<input type="text" value="S100 - " name="code">
-				<input type="submit" value="Submit Code" name="submit">
+				<input type="submit" value="Submit Code" name="submit" class="bg-dark">
 			</form>
 		</div>
 	</div>

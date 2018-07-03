@@ -8,11 +8,13 @@
 		$password = escape($_POST['password']);
 
 		if(empty($username)) {
-			$_SESSION["usernameEmapty"] = $username;
+			$_SESSION["usernameEmpty"] = $username;
 			url("../../login.php?usernameORemail=empty");
+			exit();
 		} else if(empty($password)) {
 			$_SESSION["passwordEmpty"] = $password;
 			url('../../login.php?password=empty');
+			exit();
 		} 
 
 		$sql = "SELECT * FROM users WHERE user_username = '$username' OR user_email = '$username'";
@@ -35,7 +37,7 @@
 				}
 
 				if($password == false) {
-					$_SESSION['passwordIncorect'] = $password;
+					$_SESSION["passwordIncorect"] = $password;
 					url("../../login.php?password=false");
 					exit();
 				} else if($password == true) {
@@ -44,6 +46,8 @@
 					$_SESSION["username"] = $row['user_username'];
 					$_SESSION["email"] = $row["user_email"];
 					$_SESSION["rank"] = $row["user_rank"];
+
+					url("../../index.php?login=true");
 
 				}
 			}

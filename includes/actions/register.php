@@ -17,20 +17,24 @@
 		if(empty($username)) {
 			$_SESSION['usernameEmpty'] = $username;
 			url("../../register.php?username=epty");
+			exit();
 		} else if(empty($email)) {
 			$_SESSION['emailEmpty'] = $email;
 			$_SESSION['username'] = $username;
 			url("../../register.php?email=empty");
+			exit();
 		} else if(empty($password)) {
 			$_SESSION['passwordEmpty'] = $password;
 			$_SESSION['username'] = $username;
 			$_SESSION['email'] = $email;
 			url("../../register.php?password=empty");
+			exit();
 		} else if(empty($confirmPassword)) {
 			$_SESSION['confirmPasswordEmpty'] = $email;
 			$_SESSION['username'] = $username;
 			$_SESSION['email'] = $email;
 			url("../../register.php?confirmPassword=empty");
+			exit();
 		} 
 
 		////////////////////////////////////////////////////////////
@@ -43,25 +47,30 @@
 			$_SESSION['usernameShort'] = $username;
 			$_SESSION['email'] = $email;
 			url("../../register.php?username=toShort");
+			exit();
 		} else if(strlen($username) >= 21) {
 			$_SESSION['usernameLong'] = $username;
 			$_SESSION['email'] = $email;
 			url("../../register.php?username=toLong");
+			exit();
 		} else if(strlen($password) <= 5) {
 			$_SESSION['passwordShort'] = $password;
 			$_SESSION['username'] = $username;
 			$_SESSION['email'] = $email;
 			url("../../register.php?password=toShort");
+			exit();
 		} else if(strlen($password) >= 21) {
 			$_SESSION['passwordLong'] = $password;
 			$_SESSION['username'] = $username;
 			$_SESSION['email'] = $email;
 			url("../../register.php?password=toLong");
+			exit();
 		} else if($password != $confirmPassword) {
 			$_SESSION['passwordMatch'] = $password;
 			$_SESSION['username'] = $username;
 			$_SESSION['email'] = $email;
 			url("../../register.php?passwordNot=toconfirmPassword");
+			exit();
 		}
 
 		////////////////////////////////////////////////////////////
@@ -91,6 +100,7 @@
 			$_SESSION['email'] = $email;
 
 			url("../../register.php?username=taken");
+			exit();
 			
 		} else {
 			$sql = "SELECT * FROM users WHERE user_email = '$email'";
@@ -102,6 +112,7 @@
 				$_SESSION['email'] = $email;
 
 				url("../../register.php?email=taken");
+				exit();
 				
 			}
 		}
@@ -117,11 +128,14 @@
 			mysqli_query($connection, $sql);
 
 			$_SESSION['registered'] = "Registered";
+			$_SESSION['username'] = $username;
+			$_SESSION['email'] = $email;
 			$_SESSION['code'] = $code;
 			url("../../thankyou.php");
 
 	} else {
 		$_SESSION["Nosubmit"] = "Submit";
 		url("../../register.php?Submit_Button=FALSE");
+		exit();
 
 	}

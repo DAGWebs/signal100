@@ -30,7 +30,7 @@
 	    	$username = $_SESSION["username"];
 	    	session_unset();
 	    	session_destroy();
-	    }
+	    } 
 
 	?>
 	<h1>Login</h1>
