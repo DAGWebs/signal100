@@ -11,7 +11,7 @@ This website has been created by DAG. If you have any questions comments or conc
 ---
 <ul>
 	<strong>One of these software is Required</strong>
-	<li><a href="https://www.apachefriends.org/index.html">XAMPP</a></li> <----- I USE THIS
+	<li><a href="https://www.apachefriends.org/index.html">XAMPP</a>  <----- I USE THIS</li>
 	<li><a href="https://www.mamp.info/en/">MAMP/MAMP PRO</a></li>
 	<li><a href="http://www.wampserver.com/en/">WAMP</a></li>
 	<li><a href="http://www.ampps.com/tour">AMPPS</a></li>
