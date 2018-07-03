@@ -1,6 +1,8 @@
 ---
 <h1>Signal 100 Roleplay Read ME</h1>
+
 ---
+
 This website has been created by DAG. If you have any questions comments or concerns in regards to the site PM him via GitHub (Unless Directed Otherwise). Use of this website is under the <a hreff="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL</a>. All credit must go to all contributors which will be included within the credit location (TBA Later). This website is the intellectual property (IP) of the Owner/developer of the code used within the application. This site has been created for Signal 100 Roleplay and will remain theirs. 
 
 ---
@@ -8,7 +10,7 @@ This website has been created by DAG. If you have any questions comments or conc
 
 ---
 <ul>
-	**One of these software is Required**
+	<strong>One of these software is Required</strong>
 	<li><a href="https://www.apachefriends.org/index.html">XAMPP</a></li> <----- I USE THIS
 	<li><a href="https://www.mamp.info/en/">MAMP/MAMP PRO</a></li>
 	<li><a href="http://www.wampserver.com/en/">WAMP</a></li>
